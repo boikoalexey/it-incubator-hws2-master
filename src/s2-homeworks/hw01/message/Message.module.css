@@ -1,11 +1,11 @@
 .message {
     text-align: right;
+
 }
 
 .imageAndText {
     display: flex;
     flex-direction: row-reverse;
-
 
 }
 
@@ -17,24 +17,19 @@
 }
 
 .text {
+    position: relative;
     margin-right: 10px;
     height: 60px;
     padding: 7px;
     border-radius: 10px;
     background: #0066CC;
     box-shadow: 0 5px 20px rgba(29, 33, 38, 0.03), 0 1px 2px rgba(29, 33, 38, 0.1);
+    min-width: 527px;
 
 }
 
 .text:after {
-    content: "";
-    position: absolute;
 
-    right: 375px;
-    display: block;
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(40px at top left, transparent 50%, rgba(79, 79, 79, 0.6) 0) no-repeat right bottom;
 }
 
 .name {

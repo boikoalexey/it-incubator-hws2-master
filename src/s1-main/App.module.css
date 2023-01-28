@@ -5,13 +5,16 @@
 
 .hw {
     width: 1280px;
-
     margin: auto;
+    padding: 24px 70px;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;;
 }
 
 .hwTitle {
     width: 1280px;
-    margin: 107px auto 0;
+    margin: 107px auto 10px;
+    padding-left: 70px;
 
     font-family: Montserrat, serif;
     font-size: 22px;
