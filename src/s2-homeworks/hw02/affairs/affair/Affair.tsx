@@ -10,36 +10,38 @@ type AffairPropsType = {
 }
 
 function Affair(props: AffairPropsType) {
-    const deleteCallback = (_id: number) => {
-        props.deleteAffairCallback(_id)
+    const deleteCallback = () => {
+        props.deleteAffairCallback(props.affair._id)
         // need to fix
     }
 
-    const nameClass = s.name + ' ' + s2[props.affair.priority]
-    const buttonClass = s.closeButton + ' ' + s2[props.affair.priority]
-    const affairClass = s.affair + ' ' + s2[props.affair.priority]
+    // const nameClass = s.name + ' ' + s2[props.affair.priority]
+    // const buttonClass = s.closeButton + ' ' + s2[props.affair.priority]
+    // const affairClass = s.affair + ' ' + s2[props.affair.priority]
+
+    const priorityClass = s.item + ' ' + s[props.affair.priority]
 
     return (
         <div
             id={'hw2-affair-' + props.affair._id}
-            className={affairClass}
+            className={s.affair + ' ' + s[props.affair.priority]}
         >
-            <div id={'hw2-name-' + props.affair._id} className={nameClass}>
+            <div id={'hw2-name-' + props.affair._id} className={priorityClass}>
                 {props.affair.name}
 
                 {/**/}
             </div>
             <div id={'hw2-priority-' + props.affair._id} hidden>
-                {props.affair._id}
+                {props.affair.priority}
 
                 {/**/}
             </div>
 
             <button
                 id={'hw2-button-delete-' + props.affair._id}
-                className={buttonClass}
+                className={priorityClass}
                 // need to fix
-                onClick={() => deleteCallback(props.affair._id)}
+                onClick={deleteCallback}
             >
                 {/*текст кнопки могут изменить студенты*/}
                 X
