@@ -15,18 +15,16 @@ function Affair(props: AffairPropsType) {
         // need to fix
     }
 
-    // const nameClass = s.name + ' ' + s2[props.affair.priority]
-    // const buttonClass = s.closeButton + ' ' + s2[props.affair.priority]
-    // const affairClass = s.affair + ' ' + s2[props.affair.priority]
-
-    const priorityClass = s.item + ' ' + s[props.affair.priority]
+    const nameClass = s.name + ' ' + s2[props.affair.priority]
+    const buttonClass = s.closeButton + ' ' + s2[props.affair.priority]
+    const affairClass = s.affair + ' ' + s2[props.affair.priority]
 
     return (
         <div
             id={'hw2-affair-' + props.affair._id}
-            className={s.affair + ' ' + s[props.affair.priority]}
+            className={affairClass}
         >
-            <div id={'hw2-name-' + props.affair._id} className={priorityClass}>
+            <div id={'hw2-name-' + props.affair._id} className={nameClass}>
                 {props.affair.name}
 
                 {/**/}
@@ -39,7 +37,7 @@ function Affair(props: AffairPropsType) {
 
             <button
                 id={'hw2-button-delete-' + props.affair._id}
-                className={priorityClass}
+                className={buttonClass}
                 // need to fix
                 onClick={deleteCallback}
             >
