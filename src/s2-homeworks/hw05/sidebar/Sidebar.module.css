@@ -11,15 +11,21 @@
 }
 
 .nav a {
+
 }
 
 .nav a:hover {
 }
 
 .nav a.active {
+
 }
 .close {
 }
 
 .close img {
+}
+
+.active {
+    color: #cc0000;
 }
