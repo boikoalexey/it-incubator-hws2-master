@@ -58,7 +58,6 @@ function Clock() {
     }).formatToParts();
 
     const stringTime = formatterTime.format(date); // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01)
-    // const stringDate = formatterDate.format(date); // день.месяц.год (01. February 2022)
     const stringDate = `${formatterDate[2].value}.${formatterDate[0].value}.${formatterDate[4].value}`; // день.месяц.год (17.05.2023)
 
 
