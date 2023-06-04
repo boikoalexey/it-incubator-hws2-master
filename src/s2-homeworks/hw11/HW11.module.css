@@ -1,8 +1,12 @@
 .container {
+    width: 700px;
 }
 
 .wrapper {
+    display: flex;
 }
 
 .number {
+    padding-left: 20px;
+    padding-right: 20px;
 }
